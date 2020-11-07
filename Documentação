@@ -1,0 +1,14 @@
+A variável definida serve para contabilizar o número total de páginas que serão percorridas no IMDB. Depois define-se as variáveis que serão utilizadas na raspagem de dados. Os nomes das variáveis condizem com a sua função original no IMDB.
+
+Logo após, têm-se as variáveis que são usadas no monitoramento das requisições de páginas (loop). Elas servem como contadores para impedir que o número de requisições feitas ultrapasse o permitido em um curto período de tempo; desta forma é alcançado o número de páginas necessário sem que o site expulse o usuário.
+
+O trecho em seguida representa as páginas que serão percorridas dentro do loop de requisições, assim como um contador, que registra em qual página está ocorrendo a requisição na hora de executar o código. 
+
+Atuando em conjunto está a variável sleep, que define um período de tempo ocioso na execução do código, assim fazendo com que as requisições dêem uma pausa controlada para não exceder o número de requisições permitido.
+
+Abaixo há um trecho que serve como garantia de que não haverá erros durante as requisições, visto que o código HTTP 200 é a resposta de status de sucesso que indica que a requisição foi bem sucedida; logo, no caso de algo diferente ser apresentado, fica mais prático encontrar e corrigir erros ao filtrá-los.
+Utiliza-se o pacote BeautifulSoup para analisar documentos HTML e parsear a url da request.
+
+Em seguida, o código irá selecionar os 50 containers existentes em uma única página e em seguida irá extrair as informações do mesmo.  
+O contador serve para ordenar a quantidade de filmes que foram raspados através dos requisitos escolhidos e como as informações serão organizadas para serem exportadas em um arquivo csv (Excel).
+
